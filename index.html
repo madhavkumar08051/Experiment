@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Record Form</title>
+<style>
+    .error {
+        color: red;
+    }
+</style>
+</head>
+<body>
+<h2>User Record Form</h2>
+<form id="userForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br>
+    <span id="nameError" class="error"></span><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br>
+    <span id="emailError" class="error"></span><br>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age"><br>
+    <span id="ageError" class="error"></span><br>
+    
+    <button type="button" onclick="validateForm()">Submit</button>
+</form>
+
+<script>
+function validateForm() {
+    // Fetching input values
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var age = document.getElementById("age").value;
+    
+    // Resetting previous errors
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
+    document.getElementById("ageError").innerHTML = "";
+
+    var isValid = true;
+
+    // Validation for Name
+    if (name == "") {
+        document.getElementById("nameError").innerHTML = "Name is required";
+        isValid = false;
+    }
+
+    // Validation for Email
+    if (email == "") {
+        document.getElementById("emailError").innerHTML = "Email is required";
+        isValid = false;
+    } else if (!isValidEmail(email)) {
+        document.getElementById("emailError").innerHTML = "Enter a valid email address";
+        isValid = false;
+    }
+
+    // Validation for Age
+    if (age == "" || isNaN(age)) {
+        document.getElementById("ageError").innerHTML = "Age is required and should be a number";
+        isValid = false;
+    } else if (age < 18) {
+        document.getElementById("ageError").innerHTML = "Age must be at least 18";
+        isValid = false;
+    }
+
+    if (isValid) {
+        // Form submission logic here
+        alert("Form submitted successfully!");
+        document.getElementById("userForm").reset(); // Clearing form fields after submission
+    }
+}
+
+function isValidEmail(email) {
+    // Simple email validation regex
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+</script>
+</body>
+</html>
