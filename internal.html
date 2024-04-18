@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags with Styles</title>
+    <style>
+        /* Internal style sheet */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        .center {
+            text-align: center;
+        }
+        .red-text {
+            color: red;
+        }
+        .blue-bg {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Tags with Styles</h1>
+    <p style="font-weight: bold;">This is a paragraph with inline style for bold text.</p>
+    <p class="highlight">This paragraph has a yellow background using an internal style sheet.</p>
+    <p class="center">This paragraph is centered using an internal style sheet.</p>
+    <p style="color: green;">This paragraph has inline style for green text color.</p>
+    <p class="red-text">This paragraph has a red text color using an internal style sheet.</p>
+    <p>This is a normal paragraph.</p>
+    <p class="blue-bg">This paragraph has a blue background and white text color using an internal style sheet.</p>
+    <ul>
+        <li style="color: purple;">List item 1 (inline style)</li>
+        <li class="red-text">List item 2 (internal style)</li>
+        <li>List item 3 (normal)</li>
+    </ul>
+    <a href="#" style="text-decoration: none; color: #333;">This is a link with inline style.</a>
+    <div style="border: 1px solid #333; padding: 10px;">This is a div with inline style for border and padding.</div>
+    <table style="border-collapse: collapse; width: 100%;">
+        <tr>
+            <td style="border: 1px solid #333; padding: 5px;">Cell 1</td>
+            <td style="border: 1px solid #333; padding: 5px;">Cell 2</td>
+        </tr>
+    </table>
+    <form>
+        <input type="text" style="width: 200px; padding: 5px;" placeholder="Enter your name">
+        <button style="background-color: #333; color: white; padding: 5px;">Submit</button>
+    </form>
+</body>
+</html>
