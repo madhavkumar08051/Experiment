@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Dialog Boxes</title>
+</head>
+<body>
+
+<script>
+    // exp 7A
+    // Function to display an alert dialog box
+    function showAlert() {
+        alert("Are you sure to open foodcourt!");
+    }
+
+    // Function to display a confirmation dialog box
+    function showConfirmation() {
+        var result = confirm("Are you sure you want to order?");
+        if (result == true) {
+            alert("You clicked OK!");
+        } else {
+            alert("You clicked Cancel!");
+        }
+    }
+
+    // Function to display a prompt dialog box
+    function showPrompt() {
+        var name = prompt("Please enter your name:", "James");
+        if (name != null && name != "") {
+            alert("Hello, " + name + "! How are you?");
+        } else {
+            alert("You did not enter your name!");
+        }
+    }
+</script>
+
+<button onclick="showAlert()">Food</button>
+<button onclick="showConfirmatio()">Instamart</button>
+<button onclick="showPrompt()">Genie</button>
+
+</body>
+</html>

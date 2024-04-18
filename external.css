@@ -1,0 +1,28 @@
+/* styles.css */
+
+/* Define styles for body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Define styles for h1 */
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* Define styles for p.highlight class */
+.highlight {
+    background-color: yellow;
+}
+
+/* Define styles for p.center class */
+.center {
+    text-align: center;
+}
+
+/* Define styles for p.red-text class */
+.red-text {
+    color: red;
+}
